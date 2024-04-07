@@ -1,0 +1,32 @@
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\appsettings.Development.json
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\appsettings.json
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\SE Project.staticwebassets.runtime.json
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\SE Project.exe
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\SE Project.deps.json
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\SE Project.runtimeconfig.json
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\SE Project.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\SE Project.pdb
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.GeneratedMSBuildEditorConfig.editorconfig
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.AssemblyInfoInputs.cache
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.AssemblyInfo.cs
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.csproj.CoreCompileInputs.cache
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.MvcApplicationPartsAssemblyInfo.cache
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.RazorAssemblyInfo.cache
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.RazorAssemblyInfo.cs
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.sourcelink.json
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\staticwebassets.build.json
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\staticwebassets.development.json
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\staticwebassets\msbuild.SE Project.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\staticwebassets\msbuild.build.SE Project.props
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.SE Project.props
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.SE Project.props
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\staticwebassets.pack.json
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\scopedcss\bundle\SE Project.styles.css
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\scopedcss\projectbundle\SE Project.bundle.scp.css
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.dll
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\refint\SE Project.dll
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.pdb
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.genruntimeconfig.cache
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\ref\SE Project.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\Pages\Shared\assets\vendor\bootstrap-icons\bootstrap-icons.json
