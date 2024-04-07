@@ -29,4 +29,3 @@ E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\refint\SE Project.dll
 E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.pdb
 E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.genruntimeconfig.cache
 E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\ref\SE Project.dll
-E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\Pages\Shared\assets\vendor\bootstrap-icons\bootstrap-icons.json
