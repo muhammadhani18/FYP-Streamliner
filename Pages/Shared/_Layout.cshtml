@@ -55,7 +55,7 @@
                                 </button>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="addfyp">
                             <a asp-area="" asp-page="/AddFYP">
                                 <button type="button" class="btn btn-success rounded-pill text-center" >
                                     Add FYP
@@ -80,6 +80,13 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        document.getElementById("addfyp").addEventListener('click', function () {
+            if (localStorage.getItem("username") === null || localStorage.getItem("username") === undefined) {
+                window.location.href = "/Login";
+            }
+        });
+    </script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

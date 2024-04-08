@@ -46,3 +46,19 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        console.log("Login button clicked!");
+
+        // Get the username value from the form
+        var username = document.querySelector('input[name="username"]').value;
+
+        // Set the username in local storage
+        localStorage.setItem("username", username);
+
+        // Submit the form
+        event.target.submit();
+    });
+</script>

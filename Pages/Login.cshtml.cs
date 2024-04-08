@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
@@ -39,6 +40,7 @@ namespace SE_Project.Pages
 
                                 if (password == storedPassword)
                                 {
+                                    
                                     // Login successful
                                     return RedirectToPage("/Index");
                                 }
