@@ -1,0 +1,31 @@
+﻿@page
+@model SE_Project.Pages.AddFYPModel
+@{
+    ViewData["Title"] = "Add FYP";
+}
+<div>
+    <form>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title Name</label>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-card-text"></i></span>
+                <input type="text" class="form-control" id="title" placeholder="Enter title name" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="supervisor" class="form-label">Supervisor Name</label>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                <input type="text" class="form-control" id="supervisor" placeholder="Enter supervisor name" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="details" class="form-label">Details</label>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-file-earmark-text"></i></span>
+                <textarea class="form-control" id="details" rows="5" placeholder="Enter details of FYP project" required></textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="bi bi-file-earmark-plus"></i> Add FYP</button>
+    </form>
+</div>
