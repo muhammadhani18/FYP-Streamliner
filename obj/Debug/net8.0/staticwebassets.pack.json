@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\hero-img.png"
     },
     {
+      "Id": "E:\\Hani\\University\\Semester 6\\SE Project\\wwwroot\\assets\\img\\login.png",
+      "PackagePath": "staticwebassets\\assets\\img\\login.png"
+    },
+    {
       "Id": "E:\\Hani\\University\\Semester 6\\SE Project\\wwwroot\\assets\\img\\newsletter-bg.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\newsletter-bg.jpg"
     },

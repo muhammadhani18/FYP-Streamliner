@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kANGhEwwVJp34RP4M0KtWlyLjTkwN4TkKAsl0XBVkDE=",
+  "Hash": "JXhwED+CbjnC5vWj9L32B/qRAWgQMk+0i2WjP8575Rk=",
   "Source": "SE Project",
   "BasePath": "_content/SE Project",
   "Mode": "Default",
@@ -224,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\hero-img.png"
+    },
+    {
+      "Identity": "E:\\Hani\\University\\Semester 6\\SE Project\\wwwroot\\assets\\img\\login.png",
+      "SourceId": "SE Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Hani\\University\\Semester 6\\SE Project\\wwwroot\\",
+      "BasePath": "_content/SE Project",
+      "RelativePath": "assets/img/login.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\login.png"
     },
     {
       "Identity": "E:\\Hani\\University\\Semester 6\\SE Project\\wwwroot\\assets\\img\\newsletter-bg.jpg",

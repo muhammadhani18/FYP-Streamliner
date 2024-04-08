@@ -29,3 +29,29 @@ E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\refint\SE Project.dll
 E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.pdb
 E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.genruntimeconfig.cache
 E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\ref\SE Project.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\Google.Protobuf.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\MySql.Data.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\MySqlConnector.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\System.Drawing.Common.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\System.Security.Permissions.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\System.Windows.Extensions.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\ZstdSharp.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Hani\University\Semester 6\SE Project\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.csproj.AssemblyReference.cache
+E:\Hani\University\Semester 6\SE Project\obj\Debug\net8.0\SE Project.csproj.Up2Date

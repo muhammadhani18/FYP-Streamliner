@@ -1,0 +1,48 @@
+﻿@page
+@model SE_Project.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="~/assets/img/login.png" alt="Login Image" class="img-fluid">
+                </div>
+                <div class="col-md-8">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h2 class="text-center mb-4">Login</h2>
+                            <form method="post" asp-page-handler="Login" id="loginForm">
+                                <div class="mb-3">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                                        <input type="text" class="form-control" placeholder="Username" name="username" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                        <input type="password" class="form-control" placeholder="Password" name="password" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <select class="form-select" name="userType">
+                                        <option value="">Select user type</option>
+                                        <option value="student">Student</option>
+                                        <option value="supervisor">Supervisor</option>
+                                    </select>
+                                </div>
+                                <div class="d-grid mb-3">
+                                    <button type="submit" class="btn btn-success btn-block" id="loginButton">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
