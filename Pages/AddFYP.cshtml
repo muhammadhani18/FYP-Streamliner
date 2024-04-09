@@ -3,29 +3,74 @@
 @{
     ViewData["Title"] = "Add FYP";
 }
-<div>
-    <form>
-        <div class="mb-3">
-            <label for="title" class="form-label">Title Name</label>
-            <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-card-text"></i></span>
-                <input type="text" class="form-control" id="title" placeholder="Enter title name" required>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h2 class="text-center mb-4">Add FYP</h2>
+                    <form method="post" asp-page-handler="AddFYP" id="AddFYPForm">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-card-text"></i></span>
+                                <input type="text" class="form-control" id="title" placeholder="Enter title name" name="title" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="supervisor" class="form-label">Supervisor Username</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                <input type="text" class="form-control" id="supervisor" placeholder="Enter supervisor name" name="supervisor" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Status</label>
+                            <div class="input-group">
+                                <select class="form-select" id="status" name="status">
+                                    <option value="Active"><i class="bi bi-check-circle-fill text-success"></i> Active</option>
+                                    <option value="Inactive"><i class="bi bi-x-circle-fill text-danger"></i> Inactive</option>
+                                    <option value="Completed"><i class="bi bi-check2-circle-fill text-primary"></i> Completed</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="details" class="form-label">Details</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-file-earmark-text"></i></span>
+                                <textarea class="form-control" id="details" rows="5" placeholder="Enter details of FYP project" name="details" required></textarea>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="teamMember" class="form-label">Team Member 1 Roll Number</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                <input type="text" class="form-control" id="teamMember" placeholder="Enter team member's roll number" name="teamMember1">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="teamMember" class="form-label">Team Member 2 Roll Number</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                <input type="text" class="form-control" id="teamMember" placeholder="Enter team member's roll number" name="teamMember2">
+                            </div>
+                        </div>
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-primary"><i class="bi bi-file-earmark-plus"></i> Add FYP</button>
+                        </div>
+                        <input type="hidden" id="username" name="username" />
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="mb-3">
-            <label for="supervisor" class="form-label">Supervisor Name</label>
-            <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-person"></i></span>
-                <input type="text" class="form-control" id="supervisor" placeholder="Enter supervisor name" required>
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="details" class="form-label">Details</label>
-            <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-file-earmark-text"></i></span>
-                <textarea class="form-control" id="details" rows="5" placeholder="Enter details of FYP project" required></textarea>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary"><i class="bi bi-file-earmark-plus"></i> Add FYP</button>
-    </form>
+    </div>
 </div>
+
+
+<script>
+    // Read username from localStorage
+    var username = localStorage.getItem('username');
+    // Set the value of the hidden input field
+    document.getElementById('username').value = username;
+</script>
