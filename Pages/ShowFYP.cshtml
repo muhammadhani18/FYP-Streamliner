@@ -11,13 +11,35 @@
                 <h1 class="display-4"><i class="bi bi-person-circle text-primary"></i> Welcome</h1>
                 <hr class="my-4">
             </div>
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title"><i class="bi bi-person-fill text-secondary"></i> Ms. Sidra Khalid</h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><i class="bi bi-journal-text-fill text-secondary"></i> FYP Streamliner</h6>
-                    <p class="card-text">FYP Management System</p>         
+            @foreach (var fyp in Model.FYPs)
+            {
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-journal-text-fill text-secondary"></i> @fyp.ProjectName</h5>
+                        <h6 class="card-subtitle mb-2 text-muted"><i class="bi bi-person-fill text-secondary"></i> Supervisor: @fyp.FirstName @fyp.LastName</h6>
+                        @{
+                            string statusClass = "";
+                            switch (fyp.Status.ToLower())
+                            {
+                                case "active":
+                                    statusClass = "btn btn-primary";
+                                    break;
+                                case "completed":
+                                    statusClass = "btn btn-success";
+                                    break;
+                                case "inactive":
+                                    statusClass = "btn btn-danger";
+                                    break;
+                                default:
+                                    statusClass = "btn btn-secondary";
+                                    break;
+                            }
+                        }
+                        <h6>Status: <button class="btn-sm @statusClass">@fyp.Status</button></h6>
+                        <p class="card-text">@fyp.Description</p>
+                    </div>
                 </div>
-            </div>
+            }
         </div>
     </div>
 </div>
