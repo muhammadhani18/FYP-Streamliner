@@ -1,6 +1,18 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using SE_Project.Models;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//var connectionString = builder.Configuration.GetConnectionString("Server=localhost;Port=3306;Database=FYP_Streamliner;Uid=root;Pwd=Deviljin1;");
+//builder.Services.AddDbContext<AppDbContext>(options =>
+//    options.UseMySQL(connectionString));
+
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
