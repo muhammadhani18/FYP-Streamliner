@@ -1,0 +1,32 @@
+﻿@page
+@model SE_Project.Pages.AllocateSupervisorModel
+@{
+    ViewData["Title"] = "Allocate Supervisor";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Allocate Supervisor</h2>
+                    <form method="post" class="row g-3">
+                        <div class="col-md-12">
+                            <label for="supervisor" class="form-label">Select Supervisor:</label>
+                            <select class="form-select" id="supervisor" name="supervisor">
+                                <option selected disabled>Select Supervisor</option>
+                                @foreach (var supervisor in Model.AvailableSupervisors)
+                                {
+                                    <option value="@supervisor">@supervisor</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-12 d-grid">
+                            <button type="submit" class="btn btn-primary">Allocate Supervisor</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
