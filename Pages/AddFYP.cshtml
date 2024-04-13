@@ -10,7 +10,7 @@
             <div class="card border-0">
                 <div class="card-body">
                     <h2 class="text-center mb-4">Add FYP</h2>
-                    <form method="post" asp-page-handler="AddFYP" id="AddFYPForm">
+                    <form method="post" asp-page-handler="AddFYP" id="AddFYPForm" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="title" class="form-label">Title Name</label>
                             <div class="input-group">
@@ -40,6 +40,13 @@
                             <div class="input-group">
                                 <span class="input-group-text"><i class="bi bi-file-earmark-text"></i></span>
                                 <textarea class="form-control" id="details" rows="5" placeholder="Enter details of FYP project" name="details" required></textarea>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Upload Image</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-image"></i></span>
+                                <input type="file" class="form-control" id="image" name="image">
                             </div>
                         </div>
                         <div class="mb-3">

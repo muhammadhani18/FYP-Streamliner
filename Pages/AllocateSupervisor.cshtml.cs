@@ -8,7 +8,7 @@ namespace SE_Project.Pages
 {
     public class AllocateSupervisorModel : PageModel
     {
-        public List<string> AvailableSupervisors { get; set; }
+        public List<string>? AvailableSupervisors { get; set; }
 
         public void OnGet()
         {
