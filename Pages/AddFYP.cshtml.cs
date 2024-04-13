@@ -26,6 +26,7 @@ namespace SE_Project.Pages
             string status = Request.Form["status"];
             string team_member_1 = Request.Form["teamMember1"];
             string team_member_2 = Request.Form["teamMember2"];
+            string team_member_3 = Request.Form["teamMember3"];
             string uniqueFileName = "";
 
             // Generate a unique ProjectID using GUID
@@ -109,7 +110,7 @@ namespace SE_Project.Pages
                                         Console.WriteLine("Failed to fetch roll number");
                                     }
 
-                                    string team_member_3 = username;
+                                    //string team_member_3 = username;
 
                                     
 
