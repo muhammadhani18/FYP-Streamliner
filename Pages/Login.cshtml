@@ -29,7 +29,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <select class="form-select" name="userType">
+                                    <select class="form-select" name="userType" id="type">
                                         <option value="">Select user type</option>
                                         <option value="student">Student</option>
                                         <option value="supervisor">Supervisor</option>
@@ -54,10 +54,11 @@
 
         // Get the username value from the form
         var username = document.querySelector('input[name="username"]').value;
+        var type = document.getElementById("type").value;
 
         // Set the username in local storage
         localStorage.setItem("username", username);
-
+        localStorage.setItem("type", type);
         // Submit the form
         event.target.submit();
     });

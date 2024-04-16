@@ -17,7 +17,11 @@
                     <div class="card-body">
                         <h5 class="card-title"><i class="bi bi-journal-text-fill text-secondary"></i> @fyp.ProjectName</h5>
                         <div class="description-container">
-                            <span class="arrow-icons"><i class="bi bi-arrow-up-circle-fill small text-success"></i> <i class="bi bi-arrow-down-circle-fill small text-danger"></i></span>
+                            
+                            <span class="arrow-icons" id="arrow">
+                                <i class="bi bi-arrow-up-circle-fill small text-success" onclick="updateRating('@fyp.ProjectName', 1)"></i>
+                                <i class="bi bi-arrow-down-circle-fill small text-danger" onclick="updateRating('@fyp.ProjectName', -1)"></i>
+                            </span>
                         </div>
                         <h6 class="card-subtitle mb-2 text-muted"><i class="bi bi-person-fill text-secondary"></i> Supervisor: @fyp.FirstName @fyp.LastName</h6>
                         @{
@@ -25,28 +29,34 @@
                             switch (fyp.Status.ToLower())
                             {
                                 case "active":
-                                    statusClass = "btn btn-primary btn-sm"; // Added 'btn-sm' class for small size
+                                    statusClass = "text text-primary"; // Added 'btn-sm' class for small size
                                     break;
                                 case "completed":
-                                    statusClass = "btn btn-success btn-sm";
+                                    statusClass = "text text-success ";
                                     break;
                                 case "inactive":
-                                    statusClass = "btn btn-danger btn-sm";
+                                    statusClass = "text text-danger ";
                                     break;
                                 default:
-                                    statusClass = "btn btn-secondary btn-sm";
+                                    statusClass = "text text-secondary";
                                     break;
                             }
                         }
-                        <h6>Status: <button class="@statusClass">@fyp.Status</button></h6>
+                        <h6>Status: <p class="@statusClass"><b>@fyp.Status</b></p></h6>
                         <p class="card-text">@fyp.Description</p>
+                        <form id="feedback" class="form-@fyp.ProjectName">
+                            <div class="mb-3">
+                                <label for="feedbackInput-@fyp.ProjectName" class="form-label">Your Feedback:</label>
+                                <textarea class="form-control" id="feedbackInput-@fyp.ProjectName" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-secondary">Submit</button>
+                        </form>
                     </div>
                 </div>
             }
         </div>
     </div>
 </div>
-
 <style>
     .description-container {
         display: flex;
@@ -57,3 +67,31 @@
         margin-left: 600px; /* Adjust margin as needed */
     }
 </style>
+<script>
+    var type = localStorage.getItem("type");
+
+    if (type === "student") {
+        //do not show the arrow signs
+        document.getElementById("arrow").classList.add("d-none");
+        document.getElementById("feedback").classList.add("d-none");
+    }
+
+
+    function updateRating(projectName, increment) {
+        console.log("ENtered into the update function")
+        // Send AJAX request to update the rating
+        $.ajax({
+            type: "POST",
+            url: "/ShowFYP?handler=UpdateRating", 
+            data: { projectName: projectName, increment: Number(increment) },
+            success: function (response) {
+                // Reload the page or update UI as needed
+                location.reload();
+            },
+            error: function (xhr, status, error) {
+                console.error(xhr.responseText);
+                console.log("Error bad data sent");
+            }
+        });
+    }
+</script>
