@@ -17,8 +17,7 @@
                     <div class="card-body">
                         <h5 class="card-title"><i class="bi bi-journal-text-fill text-secondary"></i> @fyp.ProjectName</h5>
                         <div class="description-container">
-                            
-                            <span class="arrow-icons" id="arrow">
+                            <span class="arrow-icons">
                                 <i class="bi bi-arrow-up-circle-fill small text-success" onclick="updateRating('@fyp.ProjectName', 1)"></i>
                                 <i class="bi bi-arrow-down-circle-fill small text-danger" onclick="updateRating('@fyp.ProjectName', -1)"></i>
                             </span>
@@ -29,7 +28,7 @@
                             switch (fyp.Status.ToLower())
                             {
                                 case "active":
-                                    statusClass = "text text-primary"; // Added 'btn-sm' class for small size
+                                    statusClass = "text text-primary";
                                     break;
                                 case "completed":
                                     statusClass = "text text-success ";
@@ -44,10 +43,10 @@
                         }
                         <h6>Status: <p class="@statusClass"><b>@fyp.Status</b></p></h6>
                         <p class="card-text">@fyp.Description</p>
-                        <form id="feedback" class="form-@fyp.ProjectName">
+                        <form class="feedback-form">
                             <div class="mb-3">
-                                <label for="feedbackInput-@fyp.ProjectName" class="form-label">Your Feedback:</label>
-                                <textarea class="form-control" id="feedbackInput-@fyp.ProjectName" rows="3"></textarea>
+                                <label for="feedbackInput" class="form-label">Your Feedback:</label>
+                                <textarea class="form-control feedback-input" rows="3"></textarea>
                             </div>
                             <button type="submit" class="btn btn-secondary">Submit</button>
                         </form>
@@ -57,6 +56,7 @@
         </div>
     </div>
 </div>
+
 <style>
     .description-container {
         display: flex;
@@ -70,15 +70,23 @@
 <script>
     var type = localStorage.getItem("type");
 
-    if (type === "student") {
+    if (type === "student" || type === null) {
         //do not show the arrow signs
-        document.getElementById("arrow").classList.add("d-none");
-        document.getElementById("feedback").classList.add("d-none");
+        
+        var feedbackForms = document.querySelectorAll('.feedback-form');
+        feedbackForms.forEach(function (form) {
+            form.style.display = 'none';
+        });
+
+        var arrows = document.querySelectorAll('.arrow-icons');
+        arrows.forEach((arrow) => {
+            arrow.style.display = 'none';
+        });
     }
 
 
     function updateRating(projectName, increment) {
-        console.log("ENtered into the update function")
+        console.log("Entered into the update function")
         // Send AJAX request to update the rating
         $.ajax({
             type: "POST",
