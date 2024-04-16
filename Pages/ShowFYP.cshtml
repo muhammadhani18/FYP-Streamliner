@@ -16,26 +16,29 @@
                 <div class="card mb-4">
                     <div class="card-body">
                         <h5 class="card-title"><i class="bi bi-journal-text-fill text-secondary"></i> @fyp.ProjectName</h5>
+                        <div class="description-container">
+                            <span class="arrow-icons"><i class="bi bi-arrow-up-circle-fill small text-success"></i> <i class="bi bi-arrow-down-circle-fill small text-danger"></i></span>
+                        </div>
                         <h6 class="card-subtitle mb-2 text-muted"><i class="bi bi-person-fill text-secondary"></i> Supervisor: @fyp.FirstName @fyp.LastName</h6>
                         @{
                             string statusClass = "";
                             switch (fyp.Status.ToLower())
                             {
                                 case "active":
-                                    statusClass = "btn btn-primary";
+                                    statusClass = "btn btn-primary btn-sm"; // Added 'btn-sm' class for small size
                                     break;
                                 case "completed":
-                                    statusClass = "btn btn-success";
+                                    statusClass = "btn btn-success btn-sm";
                                     break;
                                 case "inactive":
-                                    statusClass = "btn btn-danger";
+                                    statusClass = "btn btn-danger btn-sm";
                                     break;
                                 default:
-                                    statusClass = "btn btn-secondary";
+                                    statusClass = "btn btn-secondary btn-sm";
                                     break;
                             }
                         }
-                        <h6>Status: <button class="btn-sm @statusClass">@fyp.Status</button></h6>
+                        <h6>Status: <button class="@statusClass">@fyp.Status</button></h6>
                         <p class="card-text">@fyp.Description</p>
                     </div>
                 </div>
@@ -43,3 +46,14 @@
         </div>
     </div>
 </div>
+
+<style>
+    .description-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .arrow-icons {
+        margin-left: 600px; /* Adjust margin as needed */
+    }
+</style>
