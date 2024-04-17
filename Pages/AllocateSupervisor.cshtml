@@ -10,23 +10,36 @@
             <div class="card">
                 <div class="card-body">
                     <h2 class="card-title text-center mb-4">Allocate Supervisor</h2>
-                    <form class="row g-3">
+                    <form class="row g-3" asp-page-handler="SendEmail">
                         <div class="col-md-12">
                             <label for="supervisor" class="form-label">Select Supervisor:</label>
                             <select class="form-select" id="supervisor" name="supervisor">
                                 <option selected disabled>Select Supervisor</option>
                                 @foreach (var supervisor in Model.AvailableSupervisors)
                                 {
-                                    <option value="@supervisor">@supervisor</option>
+                                    <option value="@supervisor" name="supervisor">@supervisor</option>
                                 }
                             </select>
                         </div>
+                        <div class="col-md-12">
+                            <label for="message" class="form-label">Message:</label>
+                            <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+                        </div>
                         <div class="col-md-12 d-grid">
-                            <button type="submit" class="btn btn-primary">Allocate Supervisor</button>
+                            <button type="submit" class="btn btn-primary">Send Request</button>
                         </div>
                     </form>
+                    <input type="hidden" id="username_local" name="username" />
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    // Read username from localStorage
+    var username = localStorage.getItem('username');
+    console.log(username);
+    // Set the value of the hidden input field
+    document.getElementById('username_local').value = username;
+</script>
