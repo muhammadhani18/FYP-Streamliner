@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Text.Json;
 
 namespace SE_Project.Pages
 {
@@ -83,6 +84,38 @@ namespace SE_Project.Pages
             }
         }
 
+        public async Task<IActionResult> OnPostSubmitFeedback()
+        {
+            try
+            {
+                using (StreamReader reader = new StreamReader(Request.Body))
+                {
+                    string requestBody = await reader.ReadToEndAsync();
+                    FeedbackModel feedbackModel = JsonSerializer.Deserialize<FeedbackModel>(requestBody);
+
+                    // Access properties of feedbackModel
+                    string projectName = feedbackModel.ProjectName;
+                    string feedback = feedbackModel.Feedback;
+
+                    // Log the project name and feedback to the console
+                    Console.WriteLine($"Project Name: {projectName}, Feedback: {feedback}");
+
+                    // You can add code here to save the feedback to the database or perform other actions
+
+                    return Ok(); // Return success status
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error submitting feedback");
+                return BadRequest($"Error submitting feedback: {ex.Message}"); // Return error status with message
+            }
+        }
+        public class FeedbackModel
+        {
+            public string ProjectName { get; set; }
+            public string Feedback { get; set; }
+        }
         private IActionResult Ok()
         {
 

@@ -13,6 +13,7 @@ namespace SE_Project.Pages
         {
             string username = Request.Form["username"];
             Console.WriteLine(username);
+         
             if (string.IsNullOrEmpty(username))
             {
                 return RedirectToPage("/Login"); // Redirect to login page if username is not provided
