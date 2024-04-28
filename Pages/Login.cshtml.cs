@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
 using System;
+using System.Text.RegularExpressions;
 
 namespace SE_Project.Pages
 {
@@ -18,6 +19,26 @@ namespace SE_Project.Pages
             Console.WriteLine("Username: " + username);
             Console.WriteLine("Password: " + password);
             Console.WriteLine("User Type: " + userType);
+
+            // Regular expressions for alphanumeric username and password with symbols
+            string usernamePattern = "^[a-zA-Z0-9]*$";
+            string passwordPattern = "^[a-zA-Z0-9!@#$%^&*()-_=+`~]*$";
+
+            // Check if username matches alphanumeric pattern
+            if (!Regex.IsMatch(username, usernamePattern))
+            {
+                Console.WriteLine("Username should contain only alphanumeric characters.");
+                TempData["ErrorMessage"] = "Username should contain only alphanumeric characters.";
+                return Page();
+            }
+
+            // Check if password matches alphanumeric with symbols pattern
+            if (!Regex.IsMatch(password, passwordPattern))
+            {
+                Console.WriteLine("Password should contain only alphanumeric characters and symbols.");
+                TempData["ErrorMessage"] = "Password should contain alphanumeric characters and symbols.";
+                return Page();
+            }
 
             try
             {
@@ -40,7 +61,6 @@ namespace SE_Project.Pages
 
                                 if (password == storedPassword)
                                 {
-                                    
                                     // Login successful
                                     return RedirectToPage("/Index");
                                 }
