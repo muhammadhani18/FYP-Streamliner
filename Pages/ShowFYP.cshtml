@@ -103,7 +103,7 @@
         // Send AJAX request to update the rating
         $.ajax({
             type: "POST",
-            url: "/ShowFYP?handler=UpdateRating", 
+            url: "/ShowFYP?handler=UpdateRating", // Add the route of the ShowFYP page
             data: { projectName: projectName, increment: Number(increment) },
             success: function (response) {
                 // Reload the page or update UI as needed

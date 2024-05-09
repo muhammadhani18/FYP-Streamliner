@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] - SE_Project</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    
+
 
     <link href="" rel="icon">
     <!-- Favicons -->
@@ -49,7 +49,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/ShowFYP">Show All FYP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/ViewFyp">View FYP</a>
+                            <a id="viewfyp" class="nav-link text-dark" asp-area="" asp-page="/ViewFyp">View FYP</a>
                         </li>
                         <li class="nav-item">
                             <a asp-area="" asp-page="/Login">
@@ -60,7 +60,7 @@
                         </li>
                         <li class="nav-item" id="addfyp">
                             <a asp-area="" asp-page="/AddFYP">
-                                <button type="button" class="btn btn-success rounded-pill text-center" >
+                                <button type="button" class="btn btn-success rounded-pill text-center">
                                     Add FYP
                                 </button>
                             </a>
@@ -86,10 +86,29 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script>
         document.getElementById("addfyp").addEventListener('click', function () {
-            if (localStorage.getItem("username") === null || localStorage.getItem("username") === undefined) {
+            var userType = localStorage.getItem("type");
+            if (userType !== "Student") {
                 window.location.href = "/Login";
             }
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var userType = localStorage.getItem("type");
+            if (userType === "supervisor" || userType === null) {
+                hideAddFypAndShowFyp();
+            }
+        });
+
+        function hideAddFypAndShowFyp() {
+            var addFypButton = document.getElementById("addfyp");
+            if (addFypButton) {
+                addFypButton.style.display = "none";
+            }
+            var viewFypLink = document.getElementById("viewfyp");
+            if (viewFypLink) {
+                viewFypLink.style.display = "none";
+            }
+        }
     </script>
 
     @await RenderSectionAsync("Scripts", required: false)
